@@ -11734,6 +11734,8 @@ $jscomp.polyfill = function (e, r, p, m) {
           } else {
             $(this.dropdownOptions).find('li').removeClass('selected');
             $(option).toggleClass('selected', selected);
+            this._keysSelected = {};
+            this._keysSelected[key] = true;
           }
 
           // Set selected on original select option
